@@ -198,7 +198,7 @@ tbl_cmh <- function(data, case, exposure, strata,
           variable = .x,
           label = overall_label,
           row_type = "level",
-          cmh_or = glue::glue("{estimate} ({conf.high}, {conf.low})")
+          cmh_or = glue::glue("{estimate} ({conf.low}, {conf.high})")
         ) %>%
         dplyr::select(.data$variable, .data$row_type, .data$overall_row,
                       .data$label, .data$cmh_or, .data$p.value)
